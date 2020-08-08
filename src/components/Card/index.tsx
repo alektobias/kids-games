@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { Container, CardWrapper, FrontCard, BackCard } from './styles';
-
+import Star from '../../assets/star.png'
 interface Props {
   data: {
     image: string;
@@ -22,10 +22,10 @@ const Card: React.FC<Props> = ({ data, flip }) => {
     <Container>
       <CardWrapper flip={flip} >
         <FrontCard>
-          <img src={image} alt={name} />
+        <img src={image} alt={name} />
         </FrontCard>
         <BackCard>
-          <p>trás</p>
+          <img src={Star} alt="start" />
         </BackCard>
       </CardWrapper>
     </Container>

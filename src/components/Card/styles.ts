@@ -52,4 +52,7 @@ export const BackCard = styled.div`
   color: #333;
   text-align: center;
   transform: rotateY(180deg);
+  img {
+    height: 200px;
+  }
 `;
