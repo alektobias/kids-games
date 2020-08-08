@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import { Container, CardWrapper, FrontCard, BackCard } from './styles';
 import Star from '../../assets/star.png'
 interface Props {
@@ -10,14 +10,9 @@ interface Props {
 }
 
 const Card: React.FC<Props> = ({ data, flip }) => {
-  // const [flip, setFlip] = useState(initialFlip);
   const { image, name } = data;
 
-  // const handleClick = useCallback(() => {
-  //   if(initialFlip) return
-  //   setFlip(!flip)
-  // }, [flip])
-
+ 
   return (
     <Container>
       <CardWrapper flip={flip} >

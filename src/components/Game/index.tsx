@@ -9,7 +9,7 @@ interface Props {
   data: Array<{ image: string; name: string }>;
 }
 
-function shuffle(a: Array<any>) {
+function shuffle(a: Array<{ image: string; name: string }>): Array<{ image: string; name: string }> {
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]];
@@ -26,7 +26,7 @@ const Game: React.FC<Props> = ({ data }) => {
   const gameCards = useMemo(() => {
     const cards = [...data, ...data];
     return shuffle(cards);
-  }, []);
+  }, [data]);
 
   const [endGame, setEndGame] = useState<boolean>(false)
 
@@ -41,7 +41,7 @@ const Game: React.FC<Props> = ({ data }) => {
         
       }
     }
-  }, [selection])
+  }, [selection, corrects])
 
   useEffect(() => {
    if(corrects.length === 16) setEndGame(true) 
@@ -54,7 +54,7 @@ const Game: React.FC<Props> = ({ data }) => {
         return setSelection([...selection, data])
       }
      } 
-  }, [selection])
+  }, [selection, corrects])
   const selectedIndex = useMemo(() => selection.map(selected=> selected.index), [selection])
 
   return (
