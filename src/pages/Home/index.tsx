@@ -7,9 +7,9 @@ const Home: React.FC = () => {
     <Container>
       <h1>Jogo da Memória</h1>
       <nav>
-        <Link to="/animals">Reino Animal</Link>
-        <Link to="/vegetables">Reino Vegetal</Link>
-        <Link to="/minerals">Reino Mineral</Link>
+        <Link to="/first">Primeira Revelação</Link>
+        <Link to="/second">Segunda Revelação</Link>
+        <Link to="/third">Terceira Revelação</Link>
       </nav>
     </Container>
   );
