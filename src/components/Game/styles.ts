@@ -5,20 +5,21 @@ export const Container = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: 168px 4fr;
-  grid-template-areas: "nothing letters"
-                        "numbers game";
+  grid-template-areas:
+    'nothing letters'
+    'numbers game';
 `;
 
 export const CardsContainer = styled.div`
   grid-area: game;
   display: grid;
   grid-template-columns: repeat(4, 200px);
-  grid-template-rows: repeat(4, 200px);
+  grid-template-rows: repeat(3, 200px);
   grid-gap: 16px;
   margin: 0 auto;
 `;
 export const Letters = styled.div`
-margin: 0 52px;
+  margin: 0 52px;
   grid-area: letters;
   display: flex;
   justify-content: space-around;
@@ -34,12 +35,12 @@ export const Numbers = styled.div`
   color: #fff;
   font-size: 64px;
 `;
-export const EndGame = styled.div<{height: number; width: number;}>`
+export const EndGame = styled.div<{ height: number; width: number }>`
   position: absolute;
   top: 0;
   left: 0;
   overflow: hidden;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,4 +66,4 @@ export const EndGame = styled.div<{height: number; width: number;}>`
       font-size: 32px;
     }
   }
-`
+`;

@@ -12,7 +12,7 @@ export const Container = styled.div`
   }
   nav {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 16px;
     margin-top: 32px;
     a {

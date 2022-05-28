@@ -9,6 +9,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   html,body { 
+    padding-top: 48px;
     min-height: 100vh;
     background-color: #282a36;
     font-family: sans-serif;
